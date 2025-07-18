@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 
@@ -24,10 +24,12 @@
 </div>
 
 
+<script src="script.js"></script>
 <body>
 	<div class="top-buttons">
-		<a href="#about" class="nav-button">About</a>
-		<a href="#projects" class="nav-button">Projects</a>
+		<a href="#" class="nav-button" data-target="about">About</a>
+		<a href="#" class="nav-button" data-target="work">Work</a>
+		<a href="#" class="nav-button" data-target="projects">Projects</a>
 	</div>
     <header>
 		<div class="header-left">
@@ -36,37 +38,41 @@
         </div>
     </header>
 	<div class="main-container">
+
+		<div class="intro-paragraph">
+			My work as a machine learning engineer at UMR IGEPP (INRAE) mainly focuses on building computer vision algorithm and modelling methods to solve complex biological questions. But it also includes server administration, AI deployment, intern supervision and a bit of teaching !
+		</div>
 		<div class="section" id="about">
 			<p>
 		Hello ! My name is Théo Fabien and I am a young machine learning engineer and system administrator. Currently working at INRAE (Le Rheu), I am developing computer vision methods to track insects in 3D scenes. My tasks mainly involve working with deep learning and modeling algorithms. Additionally, I manage a local server on which I deploy and maintain algorithms used by the team for automatic detection and annotation of objects in image datasets. Here are some of the tools I use the most at work:
 			</p>
-			<table class="skills-table">
-			  <tr>
-			    <td>Python</td>
-			    <td>Docker</td>
-			  </tr>
-			  <tr>
-			    <td>Linux (Ubuntu, Debian, Arch)</td>
-			    <td>Vim/Neovim</td>
-			  </tr>
-			  <tr>
-			    <td>Cisco</td>
-			    <td>Grafana</td>
-			  </tr>
-			</table>
+				<ul class="skills-list">
+				<li>Python (Pytorch, scikit-learn, Flask...)</li>
+  				<li>GNU/Linux (Debian, Arch...)</li>
+  				<li>Docker, docker-compose</li>
+  				<li>Vim/NeoVim</li>
+				</ul>
 			<p>
-I am passionate about building some side-projects, such as my homelab that I use to learn more about networking, virtualization, cybersecurity and the automation of IT infrastructures.
+I am passionate about building some side-projects, such as my homelab that I use to learn more about networking, virtualization, cybersecurity and the automation of IT infrastructures.<br><br>
+I also love climbing and going to the cinema, and I have a very cute cat named Harold.
 			</p>
 		</div>
-		<div class="section">
-    	  <h2>EXPERIENCE</h2>
+		<div class="section" id="work">
+    	  <h2>WORK</h2>
+		  <div class="job">
+    	    <p class="job-title">Machine Learning Engineer - INRAE, UMR IGEPP</p>
+    	    <p class="job-dates">Since February 2025</p>
+    	    <ul>
+    	      <li>Custom triplet neural networks</li>
+    	      <li>Custom triplet neural networks</li>
+    	      <li>CVAT server administration, deployment of fine-tuned models (using the Nuclio platform) for semi-automated annotations</li>
+    	    </ul>
+		  </div>
     	  <div class="job">
-    	    <p class="job-title">IT Engineer - INRAE, UMR IGEPP</p>
+    	    <p class="job-title">Python developer - INRAE, UMR IGEPP</p>
     	    <p class="job-dates">May to July 2024</p>
     	    <ul>
     	      <li>Development of scripts and a web interface in Python</li>
-    	      <li>Operating system installation (Windows, Linux)</li>
-    	      <li>Software installation management (versioning, conflicts...)</li>
     	      <li>Linux virtual machines (VirtualBox)</li>
     	    </ul>
     	  </div>
@@ -81,22 +87,9 @@ I am passionate about building some side-projects, such as my homelab that I use
     	</div>
 
     	<div class="section">
-    	  <h2>SKILLS</h2>
-    	  <ul>
-    	    <li>Operating systems: Windows, Linux (Ubuntu, Debian, Arch), Android</li>
-    	    <li>Scripting (Python, Bash, Vim text editor…)</li>
-    	    <li>Virtual machines (VirtualBox) and containerization (Docker)</li>
-    	    <li>Computer networks: components and protocols (TCP/IP, UDP, DNS, SMB…)</li>
-    	    <li>Ticketing tools (Jira…)</li>
-    	    <li>Computer hardware architecture (desktop and laptop)</li>
-    	    <li>Organization, incident management</li>
-    	  </ul>
-    	  <p><strong>Languages:</strong> French (native), English (fluent), Spanish (basic)</p>
-    	</div>
-
-    	<div class="section">
     	  <h2>EDUCATION & CERTIFICATIONS</h2>
     	  <ul>
+			  <li><strong>Certificate of Competence in Network Machine Administration.</strong> – CNAM (since February 2025)</li>
     	    <li><strong>Master’s in Ecological Modelling</strong> – University of Rennes (2023)</li>
     	    <li><strong>Operating Systems and You: Becoming a Power User</strong> – Google Career Certificates (May to July 2023)</li>
     	  </ul>

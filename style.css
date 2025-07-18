@@ -52,11 +52,11 @@ h2 {
 	max-width: 750px;
 	margin: 0 auto;
 	padding: 0 20px;
-	padding-bottom: 100px;
+	padding-bottom: 500px;
 }
 
 .section {
-	margin-top: 100px;
+	margin: 200px 0;
 }
 
 .profile-image {
@@ -102,6 +102,14 @@ h2 {
 	color: #333333;
 }
 
+
+.intro-paragraph {
+  margin-top: 250px;
+  margin-bottom: 400px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
 .job-title {
   font-weight: bold;
 }
@@ -145,6 +153,21 @@ h2 {
 	color: #000000;
 }
 
+
+.skills-list {
+  display: column;
+  gap: 10px 30px;
+  list-style-type: disc;
+  padding-left: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+
 #back-to-top {
 	color: #666666;
 	font-size: 24px;
@@ -167,13 +190,16 @@ h2 {
 
 /* Responsive : réduire la taille des icônes et l'espacement sur mobile */
 @media (max-width: 600px) {
+	.profile-image {
+		display: none;
+	}
 	.socials {
 		bottom: 15px;
 		left: 8px;
 		gap: 10px;
 	}
 	.socials .social-icon {
-		font-size: 0.75rem;
+		font-size: 1rem;
 	}
 	body {
 		padding-left: 50px;
