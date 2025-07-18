@@ -64,25 +64,33 @@ h2 {
 	clip-path: circle();
 }
 
-.nav-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #797593;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.top-buttons {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	flex-wrap: wrap; /* permet d'éviter les chevauchements */
+	gap: 10px;
+	z-index: 1000;
+	justify-content: flex-end;
 }
 
-.nav-button:hover {
+.nav-button {
+	background-color: #797593;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 5px;
+	white-space: nowrap; /* empêche le texte de couper */
+}
 
-  font-size: 17px;
-  background-color: #797593ab;
+/* Hover style */
+.nav-button:hover {
+	font-size: 17px;
+	background-color: #5d5679;
 }
 
 .social-icon {
@@ -170,6 +178,12 @@ h2 {
 	body {
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+	.top-buttons {
+		top: 15px;
+		right: 15px;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 	.nav-button {
 		padding: 8px 16px;
