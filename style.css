@@ -1,11 +1,17 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
 	line-height: 1.6;
     margin: 0 auto;
     height: 100vh;
-    /*background-color: #222222;*/
 	background-color: #eaeae7;
+	color: #333;
 	padding: 50px;
+	padding-left: 100px; /* adapte si besoin */
+	padding-right: 100px; /* adapte si besoin */
 }
 
 header{
@@ -26,6 +32,7 @@ img {
 h1, h2 {
 	color: #1f8dd6;
 	margin-top: 1.2em;
+	border-bottom: 1px solid #ccc;
 }
 
 h1 {
@@ -34,6 +41,12 @@ h1 {
 
 h2 {
 	font-size: 1.4em;
+}
+
+.main-container {
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .profile-image {
@@ -58,6 +71,15 @@ h2 {
   background-color: #797593ab;
 }
 
+.social-icon {
+	color: #666666;
+	transition: color 0.2s;
+	text-decoration: none;
+}
+.social-icon:hover {
+	color: #333333;
+}
+
 .job-title {
   font-weight: bold;
 }
@@ -77,4 +99,72 @@ h2 {
   flex: 1;
   min-width: 250px;
 }
+
+
+/* Icônes fixes en bas à gauche */
+.socials {
+	position: fixed;
+	bottom: 20px;
+	left: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	z-index: 1000;
+}
+
+.socials .social-icon {
+	font-size: 1rem;
+	color: #666666;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.socials .social-icon:hover {
+	color: #000000;
+}
+
+#back-to-top {
+	color: #666666;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;
+	transition: opacity 0.3s ease, color 0.3s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#back-to-top:hover {
+	color: #000000;
+}
+
+#back-to-top.visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+
+/* Responsive : réduire la taille des icônes et l'espacement sur mobile */
+@media (max-width: 600px) {
+	.socials {
+		bottom: 15px;
+		left: 8px;
+		gap: 10px;
+	}
+	.socials .social-icon {
+		font-size: 0.75rem;
+	}
+	body {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+
+
+
+
+
+
+
+
 
