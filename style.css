@@ -1,17 +1,44 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0; /* Remove default margin */
-    height: 100vh; /* Make sure the body takes up the full viewport height */
-    /*background: linear-gradient(to bottom,#B79891, #94716B);*/
-    background-color: #222222;
+	line-height: 1.6;
+    margin: 0 auto;
+    height: 100vh;
+    /*background-color: #222222;*/
+	background-color: #eaeae7;
+	padding: 50px;
 }
 
 header{
-    color:white;
-    font-size:100px;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+	display: flex;
+    font-family: 'Georgia', serif;
+	justify-content: space-between;
+    font-size: clamp(30px, 5vw + 1rem, 75px);
+	align-items: center;
+	padding: 15px 30px;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+
+h1, h2 {
+	color: #1f8dd6;
+	margin-top: 1.2em;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+.profile-image {
+	width: 200px;
+	clip-path: circle();
 }
 
 .nav-button {
@@ -30,3 +57,24 @@ header{
   font-size: 18px;
   background-color: #797593ab;
 }
+
+.job-title {
+  font-weight: bold;
+}
+
+.job-dates {
+  font-style: italic;
+  color: #555;
+}
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.two-columns > div {
+  flex: 1;
+  min-width: 250px;
+}
+
