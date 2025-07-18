@@ -9,7 +9,7 @@ body {
     height: 100vh;
 	background-color: #eaeae7;
 	color: #333;
-	padding: 50px;
+	padding: 20px;
 	padding-left: 100px; /* adapte si besoin */
 	padding-right: 100px; /* adapte si besoin */
 }
@@ -20,7 +20,19 @@ header{
 	justify-content: space-between;
     font-size: clamp(30px, 5vw + 1rem, 75px);
 	align-items: center;
-	padding: 15px 30px;
+	padding: 5px 30px;
+}
+
+.header-left {
+	display: flex;
+	align-items: center;
+	gap: 20px; /* espace entre image et titre */
+}
+
+.page-title {
+	font-family: 'Georgia', serif;
+	font-size: 1.9rem;
+	margin: 0;
 }
 
 img {
@@ -29,17 +41,10 @@ img {
 }
 
 
-h1, h2 {
+h2 {
 	color: #1f8dd6;
 	margin-top: 1.2em;
 	border-bottom: 1px solid #ccc;
-}
-
-h1 {
-	font-size: 2em;
-}
-
-h2 {
 	font-size: 1.4em;
 }
 
@@ -47,18 +52,27 @@ h2 {
 	max-width: 750px;
 	margin: 0 auto;
 	padding: 0 20px;
+	padding-bottom: 100px;
+}
+
+.section {
+	margin-top: 100px;
 }
 
 .profile-image {
-	width: 200px;
+	width: 150px;
 	clip-path: circle();
 }
 
 .nav-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
   background-color: #797593;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -67,7 +81,7 @@ h2 {
 
 .nav-button:hover {
 
-  font-size: 18px;
+  font-size: 17px;
   background-color: #797593ab;
 }
 
@@ -156,6 +170,10 @@ h2 {
 	body {
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+	.nav-button {
+		padding: 8px 16px;
+		font-size: 14px;
 	}
 }
 
