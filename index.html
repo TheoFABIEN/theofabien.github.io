@@ -10,25 +10,25 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-
-<div class="socials">
-	<a id="back-to-top" href="#" title="Back to top">
-		<i class="fa-solid fa-arrow-up"></i>
-	</a>
-	<a class="social-icon" href="mailto:theo.fabien@inrae.fr" target="_blank">
-		<i class="fa-solid fa-envelope fa-2x"></i>
-	</a>
-	<a class="social-icon" href="https://www.linkedin.com/in/théo-fabien-5a98b1181" target="_blank">
-		<i class="fa-brands fa-linkedin fa-2x"></i>
-	</a>
-	<a class="social-icon" href="https://github.com/TheoFabien" target="_blank">
-		<i class="fa-brands fa-github fa-2x"></i>
-	</a>
-</div>
-
-
 <script src="script.js"></script>
+
+
 <body>
+
+	<div class="socials">
+		<a id="back-to-top" href="#" title="Back to top">
+			<i class="fa-solid fa-arrow-up"></i>
+		</a>
+		<a class="social-icon" href="mailto:fabien.theo@gmail.com" target="_blank">
+			<i class="fa-solid fa-envelope fa-2x"></i>
+		</a>
+		<a class="social-icon" href="https://www.linkedin.com/in/théo-fabien-5a98b1181" target="_blank">
+			<i class="fa-brands fa-linkedin fa-2x"></i>
+		</a>
+		<a class="social-icon" href="https://github.com/TheoFabien" target="_blank">
+			<i class="fa-brands fa-github fa-2x"></i>
+		</a>
+	</div>
 	<div class="top-buttons">
 		<button id="theme-toggle" class="theme-toggle-icon" aria-label="Toggle dark mode">
 			<img id="theme-icon" src="images/dark-theme-icon.svg" alt="" />
@@ -39,7 +39,7 @@
 	</div>
     <header>
 		<div class="header-left">
-			<img class="profile-image" src="images/profile.jpeg" alt=""> 
+			<img class="profile-image" src="images/profile.jpg" alt=""> 
 			<div>
 				<h1 class="page-title">Théo Fabien<span class="cursor"></span></h1>
 				<p class="job-title-header">Machine Learning engineer / System administrator</p>
@@ -49,15 +49,19 @@
 	<div class="main-container">
 
 		<div class="intro-paragraph">
-			My work as a machine learning engineer at UMR IGEPP (INRAE) mainly focuses on building computer vision algorithms and modelling methods to solve complex biological questions. But it also includes server administration, AI deployment, intern supervision and a bit of teaching !
+
+			My work as a machine learning engineer at UMR IGEPP (INRAE) mainly involves building machine learning algorithms and modelling methods, as long as leverage inferential statistical approaches, to solve complex biological questions. But it also includes server administration, AI deployment, intern supervision and a bit of teaching !
 		</div>
+
 		<div class="section" id="about">
+
 		<h2>About me</h2>
 			<p>
 		Hello ! My name is Théo Fabien and I am a young machine learning engineer and system administrator. Currently working at INRAE (Le Rheu), I am developing computer vision methods to track insects in 3D scenes. My tasks mainly involve working with deep learning and modeling algorithms. Additionally, I manage a local server on which I deploy and maintain algorithms used by the team for automatic detection and annotation of objects in image datasets. Here are some of the tools I use the most at work:
 			</p>
 				<ul class="skills-list">
 				<li>Python (Pytorch, scikit-learn, Flask...)</li>
+				<li>R</li>
   				<li>GNU/Linux (Debian, Arch...)</li>
   				<li>Docker, docker-compose</li>
   				<li>Vim/NeoVim</li>
@@ -67,7 +71,9 @@ I am passionate about building some side-projects, such as my homelab that I use
 I also love climbing and going to the cinema, and I have a very cute cat named Harold.
 			</p>
 		</div>
+
 		<div class="section" id="work">
+
     	  <h2>Work</h2>
 		  <div class="job">
     	    <p class="job-title">Machine Learning Engineer - INRAE, UMR IGEPP</p>
@@ -81,8 +87,16 @@ I also love climbing and going to the cinema, and I have a very cute cat named H
     	    <p class="job-title">Python developer - INRAE, UMR IGEPP</p>
     	    <p class="job-dates">May to July 2024</p>
     	    <ul>
-	      <li>Spatio-temporal diffusion model using geographic data</li>
+			  <li>Spatio-temporal diffusion model using geographic data</li>
     	      <li>Streamlit web interface</li>
+    	    </ul>
+    	  </div>
+    	  <div class="job">
+    	    <p class="job-title">Doctoral student - INRAE, UMR LISAH</p>
+    	    <p class="job-dates">September to December 2023</p>
+    	    <ul>
+			  <li>Stopped for medical reasons</li>
+    	      <li>Pl@ntNet project</li>
     	    </ul>
     	  </div>
     	  <div class="job">
@@ -97,9 +111,14 @@ I also love climbing and going to the cinema, and I have a very cute cat named H
     	</div>
 
     	<div class="section" id="projects">
-    	  <h2>Some projects I worked on</h2>
-	    <h3>Homelab</h3>
-	    <img class="project-img" src="images/homelab.png" alt="">
+
+    	<h2>Some projects I worked on (more on Github)</h2>
+		<h3>Homelab</h3>
+	    <img id="myImage" class="project-img" src="images/homelab.png" alt="">
+		<div id="lightbox" class="lightbox">
+			<span class="close">&times;</span>
+			<img class="lightbox-content" id="lightboxImg">
+		</div>
 	    <p>
 		I started this project in late 2024. The initial goal was to get better experience with system and network administration, but it quickly escalated into a fascinating pool of experimentation. Here are some of the services that are running in my homelab:
 	    </p>
@@ -114,19 +133,17 @@ I also love climbing and going to the cinema, and I have a very cute cat named H
 	    <p>
 		When I started this homelab, I wanted it to be as energy-efficient as possible, for both economical and ecological reasons. This was a primary criterion when picking hardware for building my servers. On the software side, I almost exclusively use containerized services through Docker or LXC, and limit my use of virtual machines (which I still occasionally use for testing new things) to save even more power.
 	    </p>
-	    <h3>CycleGAN style transfer from web-scraped images</h3>
-	    <a href="https://github.com/TheoFABIEN/CycleGan-from-web-scraped-images" target="_blank">see here</a>
-	    <h3>Msc Internship project : late blight growth model</h3>
+		<h3>Msc Internship project : late blight growth model</h3>
 	    <a href="https://github.com/TheoFABIEN/Late_blight_growth_model_with_imaging" target="_blank">
 	    	<img class="project-img" src="images/internship_img.gif" alt="">
 	    </a>
 	    <p>This project was supervised by Melen Leclerc (IGEPP, INRAE). The goal was to develop a model capable of describing the growth of late blight on potatoe leaves. To do that, I had to implement efficient image registration techniques, as well as deep image segmentation algorithms, before building the reaction-diffusion model itself. 
 	    </p>
-	    <h3>This website</h3>
+		<h3>This website</h3>
 	    <p>
-	    	One of the goals of building this website was for me to understand a bit more about front-end development. This is quite far from my field, but it only made me more curious. I stuck to the basics (HTML, CSS, Javascript), in order to perhaps later learn a bit more about the modern frameworks.<br> I hope you enjoyed it !
+	    One of the goals of building this website was for me to understand a bit more about front-end development. This is quite far from my field, but it only made me more curious. I stuck to the basics (HTML, CSS, Javascript), in order to perhaps later learn a bit more about the modern frameworks.<br> I hope you enjoyed it !
 	    </p>
-    	</div>
+		</div>
 	</div>
 
 <script>
@@ -141,7 +158,6 @@ I also love climbing and going to the cinema, and I have a very cute cat named H
 		}
 	});
 </script>
-
 
 </body>
 </html>

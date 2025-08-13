@@ -283,12 +283,6 @@ body.dark-mode .socials .social-icon:hover {
 }
 
 
-
-
-
-
-
-
 .skills-list {
   display: column;
   gap: 10px 30px;
@@ -303,6 +297,7 @@ body.dark-mode .socials .social-icon:hover {
 }
 
 .project-img {
+	margin: auto;
 	width: 150px;
 	border-radius: 8px;
 	cursor: pointer;
@@ -341,6 +336,40 @@ body.dark-mode #back-to-top:hover {
 	pointer-events: auto;
 }
 
+
+
+/* Lightbox cachée par défaut */
+.lightbox {
+  display: none;
+  position: fixed;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Image en grand au centre */
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+/* Bouton fermer */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
 
 /* Responsive : réduire la taille des icônes et l'espacement sur mobile */
 @media (max-width: 600px) {
