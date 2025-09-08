@@ -189,9 +189,9 @@ body.dark-mode h2 {
 }
 
 .nav-button {
-	background-color: #ff7a30;
+	background-color: #2a4759;
 	border: none;
-	color: white;
+	color: BDBDBD;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
@@ -202,7 +202,7 @@ body.dark-mode h2 {
 
 /* Hover style */
 .nav-button:hover {
-	background-color: #2a4759;
+	color: white;
 }
 
 .social-icon {
