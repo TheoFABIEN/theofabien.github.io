@@ -239,6 +239,14 @@ body.dark-mode .job-dates {
 	color: #58a0c8
 }
 
+.intern_desc {
+  font-style: italic;
+  color: #555;
+}
+body.dark-mode .intern_desc {
+	color: #58a0c8
+}
+
 .two-columns {
   display: flex;
   flex-wrap: wrap;
