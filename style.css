@@ -247,6 +247,14 @@ body.dark-mode .intern_desc {
 	color: #58a0c8
 }
 
+.teaching_desc {
+  font-style: italic;
+  color: #555;
+}
+body.dark-mode .teaching_desc {
+	color: #58a0c8
+}
+
 .two-columns {
   display: flex;
   flex-wrap: wrap;
@@ -333,7 +341,18 @@ body.dark-mode .socials .social-icon:hover {
 
 body.dark-mode #back-to-top {
 	color: #e4e4e4
-}
+}My work as an engineer at  <a href="https://igepp.rennes.hub.inrae.fr/" target="_blank">UMR IGEPP</a> (INRAE) mainly involves building machine learning algorithms and modelling methods, as long as leverage inferential statistical approaches, to solve questions in the field of ecology. I am currently working on computer vision approaches to track insects in 3D scenes. Additionnaly, I manage a local server on which I deploy and maintain algorithms used for automatic detection and annotation of objects in image datasets. Here are some of the tools I use the most at work:
+			</p>
+				<ul class="skills-list">
+				<li>Python (Pytorch, scikit-learn, Flask...)</li>
+				<li>R</li>
+  				<li>GNU/Linux (Debian, Arch...)</li>
+  				<li>Docker, docker-compose</li>
+  				<li>Vim/NeoVim</li>
+				</ul>
+			<p>
+I am passionate about building some side-projects, such as my homelab that I use to learn more about networking, virtualization, cybersecurity and the automation of IT infrastructures.<br><br>
+I also love climbing and hiking, and I have a very cute cat named Harold.
 
 body.dark-mode #back-to-top:hover {
 	color: #63c8ff
@@ -393,8 +412,8 @@ body.dark-mode #back-to-top:hover {
 		font-size: 1rem;
 	}
 	body {
-		padding-left: 50px;
-		padding-right: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 	.top-buttons {
 		top: 15px;
