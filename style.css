@@ -10,8 +10,8 @@ body {
 	background-color: #ffffff;
 	color: #333;
 	padding: 20px;
-	padding-left: 100px; /* adapte si besoin */
-	padding-right: 100px; /* adapte si besoin */
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
 body.dark-mode {
@@ -86,7 +86,7 @@ header{
 .header-left {
 	display: flex;
 	align-items: center;
-	gap: 20px; /* espace entre image et titre */
+	gap: 20px;
 }
 
 .page-title {
@@ -216,7 +216,7 @@ body.dark-mode h2 {
 
 
 .intro-paragraph {
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 400px;
   font-size: 1.05rem;
   line-height: 1.8;
