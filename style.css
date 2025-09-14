@@ -2,6 +2,24 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* ---------- Links --------------------------------------- */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+} 
+/* -------------------------------------------------------- */
+
 body {
     font-family: 'Arial', sans-serif;
 	line-height: 1.6;
@@ -155,7 +173,7 @@ body.dark-mode h2 {
 }
 
 .section {
-	margin: 200px 0;
+	margin: 50px 0;
 	background-color: #e9e3df;
 	  border-radius: 12px;
 	  padding: 30px;
@@ -169,6 +187,7 @@ body.dark-mode h2 {
 }
 
 
+/* ------- Navigation buttons on the top right------------- */
 .top-buttons {
 	position: fixed;
 	top: 20px;
@@ -181,13 +200,11 @@ body.dark-mode h2 {
 	transition: transform 0.4s ease, opacity 0.4s ease;
 	will-change: transform, opacity;
 }
-
 .top-buttons.hidden {
 	transform: translateY(-50px);
 	opacity: 0;
 	pointer-events: none;
 }
-
 .nav-button {
 	background-color: #2a4759;
 	border: none;
@@ -199,11 +216,10 @@ body.dark-mode h2 {
 	border-radius: 5px;
 	white-space: nowrap; /* empêche le texte de couper */
 }
-
-/* Hover style */
 .nav-button:hover {
 	color: white;
 }
+/* -------------------------------------------------------- */
 
 .social-icon {
 	color: #465c88;
@@ -217,7 +233,7 @@ body.dark-mode h2 {
 
 .intro-paragraph {
   margin-top: 30px;
-  margin-bottom: 400px;
+  margin-bottom: 50px;
   font-size: 1.05rem;
   line-height: 1.8;
   background-color: #e9e3df;
@@ -267,7 +283,7 @@ body.dark-mode .teaching_desc {
 }
 
 
-/* Icônes fixes en bas à gauche */
+/* --------------- Contact icons -------------------------- */
 .socials {
 	position: fixed;
 	bottom: 20px;
@@ -293,12 +309,12 @@ body.dark-mode .teaching_desc {
 body.dark-mode .socials .social-icon {
 	color: #e4e4e4
 }
-
 body.dark-mode .socials .social-icon:hover {
 	color: #63c8ff
 }
+/* -------------------------------------------------------- */
 
-
+/* ---------------- Skills list --------------------------- */
 .skills-list {
   display: column;
   gap: 10px 30px;
@@ -307,11 +323,13 @@ body.dark-mode .socials .social-icon:hover {
   max-width: 600px;
   margin: 30px auto;
 }
-
 .skills-list li {
   margin-bottom: 10px;
 }
 
+/* -------------------------------------------------------- */
+
+/* ----------------- Image of a project ------------------- */
 .project-img {
 	margin: auto;
 	width: 150px;
@@ -323,8 +341,9 @@ body.dark-mode .socials .social-icon:hover {
 	transform: scale(1.03);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+/* -------------------------------------------------------- */
 
-
+/* ------------- Arrow to go back to the top -------------- */
 #back-to-top {
 	color: #2a4759;
 	font-size: 24px;
@@ -341,18 +360,7 @@ body.dark-mode .socials .social-icon:hover {
 
 body.dark-mode #back-to-top {
 	color: #e4e4e4
-}My work as an engineer at  <a href="https://igepp.rennes.hub.inrae.fr/" target="_blank">UMR IGEPP</a> (INRAE) mainly involves building machine learning algorithms and modelling methods, as long as leverage inferential statistical approaches, to solve questions in the field of ecology. I am currently working on computer vision approaches to track insects in 3D scenes. Additionnaly, I manage a local server on which I deploy and maintain algorithms used for automatic detection and annotation of objects in image datasets. Here are some of the tools I use the most at work:
-			</p>
-				<ul class="skills-list">
-				<li>Python (Pytorch, scikit-learn, Flask...)</li>
-				<li>R</li>
-  				<li>GNU/Linux (Debian, Arch...)</li>
-  				<li>Docker, docker-compose</li>
-  				<li>Vim/NeoVim</li>
-				</ul>
-			<p>
-I am passionate about building some side-projects, such as my homelab that I use to learn more about networking, virtualization, cybersecurity and the automation of IT infrastructures.<br><br>
-I also love climbing and hiking, and I have a very cute cat named Harold.
+}
 
 body.dark-mode #back-to-top:hover {
 	color: #63c8ff
@@ -362,6 +370,7 @@ body.dark-mode #back-to-top:hover {
 	opacity: 1;
 	pointer-events: auto;
 }
+/* -------------------------------------------------------- */
 
 
 
