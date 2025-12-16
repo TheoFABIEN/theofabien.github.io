@@ -21,7 +21,7 @@ a:active {
 /* -------------------------------------------------------- */
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
 	line-height: 1.6;
     margin: 0 auto;
     height: 100vh;
@@ -39,7 +39,9 @@ body.dark-mode {
 
 body.dark-mode .section,
 body.dark-mode .intro-paragraph {
-	background-color: #2a2a2a;
+	/* background-color: #2a2a2a; */
+	background-color: #1e1e1e;
+    border-color: #2a2a2a;
 }
 
 body.dark-mode .nav-button {
@@ -94,7 +96,7 @@ body.dark-mode .theme-toggle-icon {
 
 header{
 	display: flex;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Ubuntu Mono", monospace;
 	justify-content: space-between;
     font-size: clamp(30px, 5vw + 1rem, 75px);
 	align-items: center;
@@ -118,7 +120,7 @@ body.dark-mode .page-title {
 }
 
 .job-title-header {
-	font-family: "Helvetica", sans-serif;
+	font-family: "Ubuntu Mono", monospace;
 	color: rgba(0, 0, 0, 0.6);
 	font-size: 1rem;
 	margin-top: 5px;
@@ -173,12 +175,14 @@ body.dark-mode h2 {
 }
 
 .section {
-	margin: 50px 0;
-	background-color: #e9e3df;
-	  border-radius: 12px;
-	  padding: 30px;
-	  margin-top: 40px;
-	  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 50px 0;
+  /*background-color: #e9e3df; */
+  background-color: #ffffff;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #e6e6e6;
+  padding: 30px;
+  margin-top: 40px;
 }
 
 .profile-image {
@@ -236,10 +240,12 @@ body.dark-mode h2 {
   margin-bottom: 50px;
   font-size: 1.05rem;
   line-height: 1.8;
-  background-color: #e9e3df;
+  /*background-color: #e9e3df;*/
+  background-color: #ffffff;
   border-radius: 12px;
+  border-style: solid;
+  border-color: #e6e6e6;
   padding: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .job-title {
@@ -334,6 +340,9 @@ body.dark-mode .socials .social-icon:hover {
 	margin: auto;
 	width: 150px;
 	border-radius: 8px;
+    border-style: solid;
+    border-color: #2a2a2a;
+    border-width: 1px;
 	cursor: pointer;
 }
 
@@ -435,13 +444,4 @@ body.dark-mode #back-to-top:hover {
 		font-size: 14px;
 	}
 }
-
-
-
-
-
-
-
-
-
 
