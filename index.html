@@ -124,9 +124,15 @@ I also love climbing and hiking, and I have a very cute cat named Harold.
 
 		<h2>Some projects I worked on (more <a href="https://github.com/TheoFABIEN" target="_blanck">here</a>)</h2>
 
-        <h3>Hiking Log Map</h3>
+        <h3>My Outdoor Archive</h3>
+	    <img id="myImage" class="project-img" src="images/MyOutdoorArchive_demo.png" alt="">
         <p>
-        This project is an interactive map of hikes and climbing spots around Haute-Savoie. Using a PostGIS database, it stores information for locations I visited, including GPX tracks or additional notes. The map is built with Leaflet, allowing users to explore routes visually and filter layers. It demonstrates spatial database management, dynamic API integration with FastAPI, and intuitive web mapping. Further improvements will focus on integrating photo albums associated with each location.
+        This project is a self-hosted web service designed to archive and explore hiking routes and outdoor places. It combines an interactive map interface with a spatial database to store GPX tracks, places or areas I visited.
+        The backend is built with FastAPI and connects to a PostgreSQL database extended with PostGIS to handle geographic data. GPX files can be imported and parsed automatically to extract route geometry and elevation statistics.</p>
+        <p>
+        On the frontend, the map is rendered with Leaflet, allowing to visualize routes and locations directly via OpenStreetMap.</p>
+        <p>
+        Further improvements will focus on integrating photo albums associated with each location and expanding the editing and visualization tools available within the user interface.
         </p>
 
 		<h3>Home Server Infrastructure</h3>
