@@ -77,16 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const img = document.getElementById('myImage');   // <- correspond maintenant à l'ID de l'image ciblée
-  if (!img) return; // sécurité si l'image est absente
 
+  const images = document.querySelectorAll(".project-img");
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const closeBtn = lightbox.querySelector('.close');
 
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'block';
-    lightboxImg.src = img.src; // mettre ici une version HD si besoin
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src; // mettre ici une version HD si besoin
+    });
   });
 
   closeBtn.addEventListener('click', () => {
