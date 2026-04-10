@@ -45,12 +45,13 @@ body.dark-mode .intro-paragraph {
 }
 
 body.dark-mode .nav-button {
-	background-color: #444;
+	background: none;
 	color: #f0f0f0;
 }
 
 body.dark-mode .nav-button:hover {
-	background-color: #666;
+	color: #63c8ff;
+    border-bottom: 2px solid #63c8ff;
 }
 
 body.dark-mode .job-title-header {
@@ -210,18 +211,18 @@ body.dark-mode h2 {
 	pointer-events: none;
 }
 .nav-button {
-	background-color: #2a4759;
+	background: none;
 	border: none;
-	color: LightGray;
+	color: gray;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
-	border-radius: 5px;
 	white-space: nowrap; /* empêche le texte de couper */
 }
 .nav-button:hover {
-	color: white;
+	color: #465c88;
+    border-bottom: 2px solid #465c88;
 }
 /* -------------------------------------------------------- */
 
