@@ -1,31 +1,26 @@
+:root {
+    --ui-white: #fff;
+    --ui-darkgrey: #1e1e1e;
+    --ui-midgrey: #2a2a2a;
+    --ui-lightgrey: #e4e4e4;
+    --ui-lightblue: #63c8ff;
+    --ui-blue: #465c88;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
-/* ---------- Links --------------------------------------- */
-a:link {
+a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:active {
-  text-decoration: none;
-} 
-/* -------------------------------------------------------- */
 
 body {
     font-family: 'Inter', sans-serif;
 	line-height: 1.6;
     margin: 0 auto;
     height: 100vh;
-	background-color: #ffffff;
+	background-color: var(--ui-white);
 	color: #333;
 	padding: 20px;
 	padding-left: 100px;
@@ -33,15 +28,14 @@ body {
 }
 
 body.dark-mode {
-	background-color: #1e1e1e;
-	color: #e4e4e4;
+	background-color: var(--ui-darkgrey);
+	color: var(--ui-lightgrey);
 }
 
 body.dark-mode .section,
 body.dark-mode .intro-paragraph {
-	/* background-color: #2a2a2a; */
-	background-color: #1e1e1e;
-    border-color: #2a2a2a;
+	background-color: var(--ui-darkgrey);
+    border-color: var(--ui-midgrey);
 }
 
 body.dark-mode .nav-button {
@@ -50,12 +44,12 @@ body.dark-mode .nav-button {
 }
 
 body.dark-mode .nav-button:hover {
-	color: #63c8ff;
-    border-bottom: 2px solid #63c8ff;
+	color: var(--ui-lightblue);
+    border-bottom: 2px solid var(--ui-lightblue);
 }
 
 body.dark-mode .job-title-header {
-	color: #e4e4e4;
+	color: var(--ui-lightgrey);
 }
 
 body.dark-mode a {
@@ -112,12 +106,12 @@ header{
 
 .page-title {
 	font-size: 1.9rem;
-	color: #465c88;
+	color: var(--ui-blue);
 	margin: 0;
 }
 
 body.dark-mode .page-title {
-	color: #63c8ff
+	color: var(--ui-lightblue)
 }
 
 .job-title-header {
@@ -127,8 +121,6 @@ body.dark-mode .page-title {
 	margin-top: 5px;
 	margin-bottom: 0;
 }
-
-
 
 .cursor {
 	  display: inline-block;
@@ -148,9 +140,6 @@ body.dark-mode .page-title {
 }
 
 
-
-
-
 img {
 	display: block;
 	max-inline-size: 100%;
@@ -158,14 +147,14 @@ img {
 
 
 h2 {
-	color: #465c88;
+	color: var(--ui-blue);
 	margin-top: 1.2em;
 	border-bottom: 1px solid #ccc;
 	font-size: 1.4em;
 }
 
 body.dark-mode h2 {
-	color: #63c8ff
+	color: var(--ui-lightblue);
 }
 
 .main-container {
@@ -177,8 +166,7 @@ body.dark-mode h2 {
 
 .section {
   margin: 50px 0;
-  /*background-color: #e9e3df; */
-  background-color: #ffffff;
+  background-color: var(--ui-white);
   border-radius: 12px;
   border-style: solid;
   border-color: #e6e6e6;
@@ -198,7 +186,7 @@ body.dark-mode h2 {
 	top: 20px;
 	right: 20px;
 	display: flex;
-	flex-wrap: wrap; /* permet d'éviter les chevauchements */
+	flex-wrap: wrap;
 	gap: 10px;
 	z-index: 1000;
 	justify-content: flex-end;
@@ -221,13 +209,13 @@ body.dark-mode h2 {
 	white-space: nowrap; /* empêche le texte de couper */
 }
 .nav-button:hover {
-	color: #465c88;
-    border-bottom: 2px solid #465c88;
+	color: var(--ui-blue);
+    border-bottom: 2px solid var(--ui-blue);
 }
 /* -------------------------------------------------------- */
 
 .social-icon {
-	color: #465c88;
+	color: var(--ui-blue);
 	transition: color 0.2s;
 	text-decoration: none;
 }
@@ -241,8 +229,7 @@ body.dark-mode h2 {
   margin-bottom: 50px;
   font-size: 1.05rem;
   line-height: 1.8;
-  /*background-color: #e9e3df;*/
-  background-color: #ffffff;
+  background-color: var(--ui-white);
   border-radius: 12px;
   border-style: solid;
   border-color: #e6e6e6;
@@ -253,28 +240,11 @@ body.dark-mode h2 {
   font-weight: bold;
 }
 
-.job-dates {
+.job-dates, .intern_desc, .teaching_desc {
   font-style: italic;
   color: #555;
 }
-
-body.dark-mode .job-dates {
-	color: #58a0c8
-}
-
-.intern_desc {
-  font-style: italic;
-  color: #555;
-}
-body.dark-mode .intern_desc {
-	color: #58a0c8
-}
-
-.teaching_desc {
-  font-style: italic;
-  color: #555;
-}
-body.dark-mode .teaching_desc {
+body.dark-mode :is(.job-dates, .intern_desc, .teaching_desc) {
 	color: #58a0c8
 }
 
@@ -314,10 +284,10 @@ body.dark-mode .teaching_desc {
 }
 
 body.dark-mode .socials .social-icon {
-	color: #e4e4e4
+	color: var(--ui-lightgrey);
 }
 body.dark-mode .socials .social-icon:hover {
-	color: #63c8ff
+	color: var(--ui-lightblue);
 }
 /* -------------------------------------------------------- */
 
@@ -342,7 +312,7 @@ body.dark-mode .socials .social-icon:hover {
 	width: 150px;
 	border-radius: 8px;
     border-style: solid;
-    border-color: #2a2a2a;
+    border-color: var(--ui-midgrey);
     border-width: 1px;
 	cursor: pointer;
 }
@@ -369,11 +339,11 @@ body.dark-mode .socials .social-icon:hover {
 }
 
 body.dark-mode #back-to-top {
-	color: #e4e4e4
+	color: var(--ui-lightgrey);
 }
 
 body.dark-mode #back-to-top:hover {
-	color: #63c8ff
+	color: var(--ui-lightblue);
 }
 
 #back-to-top.visible {
@@ -383,8 +353,7 @@ body.dark-mode #back-to-top:hover {
 /* -------------------------------------------------------- */
 
 
-
-/* Lightbox cachée par défaut */
+/* Lightbox hidden by default */
 .lightbox {
   display: none;
   position: fixed;
@@ -395,16 +364,12 @@ body.dark-mode #back-to-top:hover {
   height: 100%;
   background-color: rgba(0,0,0,0.8);
 }
-
-/* Image en grand au centre */
 .lightbox-content {
   display: block;
   margin: auto;
   max-width: 90%;
   max-height: 80%;
 }
-
-/* Bouton fermer */
 .close {
   position: absolute;
   top: 20px;
@@ -417,7 +382,7 @@ body.dark-mode #back-to-top:hover {
   color: #ccc;
 }
 
-/* Responsive : réduire la taille des icônes et l'espacement sur mobile */
+/* Responsive mobile mode */
 @media (max-width: 600px) {
 	.profile-image {
 		display: none;
