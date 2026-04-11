@@ -19,32 +19,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const navButtons = document.querySelector('.top-buttons');
-  let lastScrollY = window.scrollY;
+    const navButtons = document.querySelector('.top-buttons');
+    const hamburger = document.querySelector('.hamburger-menu'); // Select the burger
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-  let ticking = false;
+    function updateButtonVisibility() {
+        const currentScroll = window.scrollY;
 
-  function updateButtonVisibility() {
-    const currentScroll = window.scrollY;
+        if (navButtons.classList.contains('active')) {
+            ticking = false;
+            return;
+        }
 
-    if (currentScroll > lastScrollY + 10) {
-      // on scroll vers le bas : cacher
-      navButtons.classList.add('hidden');
-    } else if (currentScroll < lastScrollY - 10) {
-      // on remonte : montrer
-      navButtons.classList.remove('hidden');
+        if (currentScroll > lastScrollY + 10 && currentScroll > 50) {
+            navButtons.classList.add('hidden');
+            hamburger.classList.add('hidden');
+        } else if (currentScroll < lastScrollY - 10) {
+            navButtons.classList.remove('hidden');
+            hamburger.classList.remove('hidden');
+        }
+
+        lastScrollY = currentScroll;
+        ticking = false;
     }
 
-    lastScrollY = currentScroll;
-    ticking = false;
-  }
-
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(updateButtonVisibility);
-      ticking = true;
-    }
-  });
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateButtonVisibility);
+            ticking = true;
+        }
+    });
 });
 
 
@@ -102,4 +107,30 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') lightbox.style.display = 'none';
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector(".hamburger-menu");
+    const burgerIcon = document.getElementById("burger");
+    const navbar = document.querySelector(".top-buttons");
+    const navLinks = document.querySelectorAll(".nav-button");
+
+    function toggleMenu() {
+        burgerIcon.classList.toggle("open");
+        navbar.classList.toggle("active");
+    }
+
+    hamburger.addEventListener("click", (e) => {
+        e.preventDefault();
+        toggleMenu();
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            burgerIcon.classList.remove("open");
+            navbar.classList.remove("active");
+        });
+    });
 });

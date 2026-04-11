@@ -16,12 +16,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 	line-height: 1.6;
     margin: 0 auto;
     height: 100vh;
 	background-color: var(--ui-white);
-	color: #333;
+	color: #000;
 	padding: 20px;
 	padding-left: 100px;
 	padding-right: 100px;
@@ -201,7 +202,7 @@ body.dark-mode h2 {
 .nav-button {
 	background: none;
 	border: none;
-	color: gray;
+	color: #000;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
@@ -227,7 +228,7 @@ body.dark-mode h2 {
 .intro-paragraph {
   margin-top: 30px;
   margin-bottom: 50px;
-  font-size: 1.05rem;
+  font-size: 16px;
   line-height: 1.8;
   background-color: var(--ui-white);
   border-radius: 12px;
@@ -382,8 +383,13 @@ body.dark-mode #back-to-top:hover {
   color: #ccc;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
+
 /* Responsive mobile mode */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 	.profile-image {
 		display: none;
 	}
@@ -400,11 +406,101 @@ body.dark-mode #back-to-top:hover {
 		padding-right: 30px;
 	}
 	.top-buttons {
-		top: 15px;
-		right: 15px;
-		flex-direction: column;
-		align-items: flex-end;
+        left: 0;
+        top: 0;
+        height: 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: none;
 	}
+    .top-buttons.active {
+        height: 100vh;
+        transform: translateX(0);
+        pointer-events: auto;
+        opacity: 1;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .top-buttons.active .nav-button {
+        font-size: 24px;
+    }
+    body.dark-mode .top-buttons {
+        background-color: rgba(30, 30, 30, 0.2)
+    }
+    .hamburger-menu {
+        width: 36px;
+        height: 36px;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        z-index: 2000;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        transition: transform 0.3s ease, opacity 0.4s ease;
+    }
+    .hamburger-menu.hidden {
+        transform: translateX(100px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    #burger {
+        background: #000;
+        width: 30px;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        cursor: pointer;
+    }
+    #burger::before, #burger::after {
+        content:'';
+        width: 30px;
+        height: 2px;
+        left: 0;
+        display: inline-block;
+        position: absolute;
+        transform-origin: center;
+        transition: all 0.3s ease;
+    }
+    #burger::before {
+        top: -9px;
+    }
+    #burger::after {
+        top: 9px;
+    }
+    #burger.open {
+        background:transparent;
+    }
+    #burger.open::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    #burger.open::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    #burger, #burger::before, #burger::after {
+        background: #000;
+    }
+    body.dark-mode #burger, 
+    body.dark-mode #burger::before, 
+    body.dark-mode #burger::after {
+        background: white;
+    }
 	.nav-button {
 		padding: 8px 16px;
 		font-size: 14px;
