@@ -51,17 +51,16 @@
 
 		<div class="intro-paragraph">
 
-            My work as an engineer at  <a href="https://igepp.rennes.hub.inrae.fr/" target="_blank">UMR IGEPP</a> (INRAE) focuses on developing and maintaining data processing pipelines and computational tools for ecological research. I am currently involved in computer vision approaches to track objects in complex 3D scenes. In parallel, I design and manage a local server infrastructure used to store, process and share large datasets, where I deploy and maintain containerized services for collaborative data annotation. <br><br>
+            My work as an engineer at  <a href="https://igepp.rennes.hub.inrae.fr/" target="_blank">UMR IGEPP</a> (INRAE) focuses on developing and maintaining data processing pipelines and computational tools for ecological research. I currently build pielines that automate image-based analysis of ecological systems. In parallel, I design and manage a local server infrastructure used to store, process and share large-scale datasets, turning experimental pipelines into usable tools. <br><br>
 Here are some tools I use:
 				<ul class="skills-list">
 				    <li>Python, C++, R, PostgreSQL</li>
-  				    <li>GNU/Linux (Debian, Arch...), Vim/Neovim, Git</li>
+  				    <li>Git, GNU/Linux, Neovim</li>
   				    <li>Docker, Docker Compose, Proxmox</li>
 				</ul>
             </p>
 			<p>
-I am passionate about building some side-projects, such as my homelab that I use to learn more about networking, databases, cybersecurity and the automation of IT infrastructures.<br>
-I also love climbing and hiking, and I have a very cute cat named Harold.
+In my spare time, I like building some side-projects such as my homelab. I also love climbing and hiking, and I have a very cute cat named Harold.
 		</div>
 
 		<div class="section" id="work">
@@ -88,8 +87,8 @@ I also love climbing and hiking, and I have a very cute cat named Harold.
     	    <p class="job-title">Doctoral student - INRAE, UMR LISAH</p>
     	    <p class="job-dates">September to December 2023</p>
     	    <ul>
+    	      <li>Worked on the Pl@ntNet project</li>
 			  <li>Stopped for medical reasons</li>
-    	      <li>Pl@ntNet project</li>
     	    </ul>
     	  </div>
     	  <div class="job">
@@ -128,12 +127,7 @@ I also love climbing and hiking, and I have a very cute cat named Harold.
 	    <img id="outdoorArchive" class="project-img" src="images/MyOutdoorArchive_demo.png" alt="">
         <p>
         A self-hosted web service designed to archive and explore hiking routes and outdoor places. It combines an interactive map interface with a spatial database to store GPX tracks, places or areas I visited.
-        The backend is built with FastAPI and connects to a PostgreSQL database extended with PostGIS to handle geographic data. GPX files can be imported and parsed automatically to extract route geometry and elevation statistics.</p>
-        <p>
-        On the frontend, the map is rendered with Leaflet, allowing to visualize routes and locations directly via OpenStreetMap.</p>
-        <p>
-        Further improvements will focus on integrating photo albums associated with each location and expanding the editing and visualization tools available within the user interface.
-        </p>
+        The backend is built with FastAPI and connects to a PostgreSQL database extended with PostGIS to handle geographic data. GPX files can be imported and parsed automatically to extract route geometry and elevation statistics. The Vue.js frontend uses Leaflet to build the interactive map.</p>
 
 		<h3>Home Server Infrastructure</h3>
 	    <img id="homeServer" class="project-img" src="images/homelab_white.png" alt="">
@@ -142,14 +136,14 @@ I also love climbing and hiking, and I have a very cute cat named Harold.
 			<img class="lightbox-content" id="lightboxImg">
 		</div>
 	    <p>
-		A collection of self-hosted services that I use every day. The initial goal of this project was to get better experience with system and network administration, but it quickly escalated into a fascinating pool of experimentation. Here are some of my deployed services:
+		A collection of self-hosted services that I use daily. The initial goal of this project was to get better experience with system and network administration, but it quickly escalated into a fascinating pool of experimentation. Here are some of my deployed services:
 	    </p>
 	    <ul>
 		<li>AdGuard DNS sinkhole</li>
 		<li>Nginx Proxy Manager</li>
 		<li>Tailscale VPN</li>
-		<li>Vaultwarden password manager with scheduled backups to another machine</li>
-		<li>Proxmox server running VMs for testing new things</li>
+		<li>Vaultwarden password manager with scheduled backups</li>
+		<li>Proxmox running VMs</li>
 		<li>Cadvisor, Prometheus, Grafana</li>
 	    </ul>
 	    <p>
