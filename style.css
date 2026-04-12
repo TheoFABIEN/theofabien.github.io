@@ -507,5 +507,8 @@ body.dark-mode #back-to-top {
 		padding: 8px 16px;
 		font-size: 14px;
 	}
+    .header-left {
+        margin-top: 20px;
+    }
 }
 
