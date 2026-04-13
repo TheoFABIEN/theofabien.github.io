@@ -165,8 +165,10 @@ li::marker {
 }
 
 .profile-image {
+    margin-top: 13px;
 	width: 150px;
-	clip-path: circle();
+    aspect-ratio: 4/5;
+    object-fit: cover;
 }
 
 
