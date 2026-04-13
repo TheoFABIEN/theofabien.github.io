@@ -246,7 +246,6 @@ body.dark-mode .navbar.scrolled {
 .intro-paragraph {
   margin-top: 30px;
   margin-bottom: 50px;
-  font-size: 16px;
   line-height: 1.8;
   background-color: var(--bg-color);
   border-bottom-color: var(--ui-lightgrey);
@@ -413,6 +412,7 @@ body.dark-mode #back-to-top {
 	body {
 		padding-left: 30px;
 		padding-right: 30px;
+        font-size: 14px;
 	}
 	.navbar {
         left: 0;
