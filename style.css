@@ -1,9 +1,9 @@
 :root {
-    --ui-white: #fff;
+    --ui-white: #f4f1ea;
     --ui-darkgrey: #010101;
     --ui-midgrey: #2a2a2a;
     --ui-lightgrey: #e4e4e4;
-    --ui-lightblue: #63c8ff;
+    --ui-lightblue: #6b8fa3;
     --ui-blue: #465c88;
 
     --bg-color: var(--ui-white);
@@ -28,8 +28,8 @@ body.dark-mode {
             border-bottom-color: 2px solid var(--ui-lightblue);
         }
     }
-    a {
-    	color: #aad4ff;
+    a, .link-arrow {
+    	color: #aad4ff !important;
     }
     .theme-toggle-icon {
     	border-color: #f0f0f0;
@@ -141,6 +141,10 @@ h2 {
 	color: var(--accent-color);
 	margin-top: 1.2em;
 	font-size: 1.4em;
+}
+
+li::marker {
+    content: "> ";
 }
 
 .main-container {
@@ -381,6 +385,11 @@ body.dark-mode #back-to-top {
     }
 }
 
+.link-arrow {
+    color: var(--ui-lightblue) !important;
+    
+}
+
 .hamburger-menu {
     display: none;
 }
@@ -422,7 +431,7 @@ body.dark-mode #back-to-top {
         pointer-events: none;
         transition: none;
 	}
-    .nav-name {
+    .nav-name, .pipe-separator {
         display: none;
     }
     .nav-buttons {
