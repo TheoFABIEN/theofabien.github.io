@@ -41,7 +41,7 @@ html {
 }
 
 a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 body {
@@ -79,7 +79,6 @@ body.dark-mode .intro-paragraph {
     	width: 100%;
     	height: 100%;
     	object-fit: contain;
-    	transition: filter 0.2s ease;
     }
     &:hover img {
     	filter: brightness(1.2);
@@ -119,7 +118,7 @@ header{
     display: inline-block;
     width: 3px;
     height: 1em;
-    background-color: currentColor;
+    background-color: var(--accent-color);
     margin-left: 5px;
     animation: blink 0.8s steps(1) infinite;
     vertical-align: middle;
@@ -141,9 +140,11 @@ h2 {
 	color: var(--accent-color);
 	margin-top: 1.2em;
 	font-size: 1.4em;
+    font-weight: bold !important;
 }
 
 li::marker {
+    font-family: "Ubuntu Mono", monospace;
     content: "> ";
 }
 
@@ -156,12 +157,10 @@ li::marker {
 
 .section {
     margin: 50px 0;
-    background-color: var(--bg-color);
-    padding: 30px;
+    background-color: transparent;
+    padding: 15px;
     margin-top: 40px;
-    border-bottom-color: var(--ui-lightgrey);
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
+    border-bottom: 2px solid var(--ui-lightgrey);
 }
 
 .profile-image {
@@ -186,7 +185,6 @@ li::marker {
     z-index: 1000;
     background-color: transparent;
     box-shadow: none;
-    transition: background-color 0.1s ease, box-shadow 0.2s ease;
     &.scrolled {
         opacity: 1;
         background-color: var(--bg-color);
@@ -218,6 +216,7 @@ body.dark-mode .navbar.scrolled {
 	pointer-events: none;
 }
 .nav-button {
+    text-decoration: none !important;
 	background: none;
 	border: none;
 	color: #000;
@@ -236,7 +235,6 @@ body.dark-mode .navbar.scrolled {
 
 .social-icon {
 	color: var(--ui-blue);
-	transition: color 0.2s;
 	text-decoration: none;
     &:hover {
     	color: #333333;
@@ -246,12 +244,12 @@ body.dark-mode .navbar.scrolled {
 .intro-paragraph {
   margin-top: 30px;
   margin-bottom: 50px;
-  line-height: 1.8;
+  line-height: 1.6;
   background-color: var(--bg-color);
   border-bottom-color: var(--ui-lightgrey);
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  padding: 30px;
+  padding: 15px;
 }
 
 .job-title {
@@ -259,8 +257,8 @@ body.dark-mode .navbar.scrolled {
 }
 
 .job-dates, .intern_desc, .teaching_desc {
-  font-style: italic;
-  color: #555;
+    font-family: "Ubuntu Mono", monospace;
+    color: #555;
 }
 body.dark-mode :is(.job-dates, .intern_desc, .teaching_desc) {
 	color: #58a0c8
@@ -292,7 +290,6 @@ body.dark-mode :is(.job-dates, .intern_desc, .teaching_desc) {
     	font-size: 1rem;
     	color: var(--socials-color);
     	text-decoration: none;
-    	transition: color 0.3s;
         &:hover {
         	color: #000000;
         }
@@ -320,10 +317,7 @@ body.dark-mode .socials .social-icon:hover {
 .project-img {
 	margin: auto;
 	width: 150px;
-	border-radius: 8px;
-    border-style: solid;
-    border-color: var(--ui-midgrey);
-    border-width: 1px;
+    border: 1px solid var(--ui-midgrey);
 	cursor: pointer;
     &:hover {
     	transform: scale(1.03);
@@ -338,7 +332,7 @@ body.dark-mode .socials .social-icon:hover {
 	font-size: 24px;
 	text-decoration: none;
 	text-align: center;
-	transition: opacity 0.3s ease, color 0.3s;
+	transition: opacity 0.2s ease, color 0.2s;
 	opacity: 0;
 	pointer-events: none;
     &:hover {
@@ -426,7 +420,6 @@ body.dark-mode #back-to-top {
         height: 100vh;
         justify-content: center;
         align-items: center;
-        transition: transform 0.3s ease-in-out;
         z-index: 999;
         transform: translateX(100%);
         opacity: 0;
