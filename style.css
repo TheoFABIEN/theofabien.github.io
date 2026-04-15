@@ -12,30 +12,6 @@
     --socials-color: #2a4759;
 }
 
-body.dark-mode {
-    --bg-color: var(--ui-darkgrey);
-    --text-color: var(--ui-lightgrey);
-    --accent-color: var(--ui-lightblue);
-    --socials-color: var(--ui-lightgrey);
-    .job-title-header {
-    	color: var(--ui-lightgrey);
-    }
-    .nav-button {
-    	background: none;
-    	color: #f0f0f0;
-        &:hover {
-        	color: var(--ui-lightblue);
-            border-bottom-color: 2px solid var(--ui-lightblue);
-        }
-    }
-    a, .link-arrow {
-    	color: #aad4ff !important;
-    }
-    .theme-toggle-icon {
-    	border-color: #f0f0f0;
-    }
-}
-
 html {
 	scroll-behavior: smooth;
 }
@@ -55,11 +31,6 @@ body {
     &.no-scroll {
         overflow: hidden;
     }
-}
-
-body.dark-mode .section,
-body.dark-mode .intro-paragraph {
-    border-bottom-color: var(--ui-lightgrey);
 }
 
 .theme-toggle-icon {
@@ -201,9 +172,6 @@ li::marker {
         }
     }
 }
-body.dark-mode .navbar.scrolled {
-    box-shadow: 0 0 2px 0 var(--ui-white);
-}
 .nav-name {
     font-family: "Ubuntu Mono", monospace;
     font-weight: bold;
@@ -267,9 +235,6 @@ body.dark-mode .navbar.scrolled {
     font-family: "Ubuntu Mono", monospace;
     color: #555;
 }
-body.dark-mode :is(.job-dates, .intern_desc, .teaching_desc) {
-	color: #58a0c8
-}
 
 .two-columns {
   display: flex;
@@ -301,10 +266,6 @@ body.dark-mode :is(.job-dates, .intern_desc, .teaching_desc) {
         	color: #000000;
         }
     }
-}
-
-body.dark-mode .socials .social-icon:hover {
-	color: var(--ui-lightblue);
 }
 
 /* ---------------- Skills list --------------------------- */
@@ -348,13 +309,6 @@ body.dark-mode .socials .social-icon:hover {
     &.visible {
     	opacity: 1;
     	pointer-events: auto;
-    }
-}
-
-body.dark-mode #back-to-top {
-	color: var(--ui-lightgrey);
-    &:hover {
-    	color: var(--ui-lightblue);
     }
 }
 
@@ -457,9 +411,6 @@ body.dark-mode #back-to-top {
             font-size: 24px;
         }
     }
-    body.dark-mode .top-buttons {
-        background-color: rgba(30, 30, 30, 0.2);
-    }
     .hamburger-menu {
         width: 36px;
         height: 36px;
@@ -511,16 +462,8 @@ body.dark-mode #back-to-top {
         transform-origin: center;
         transition: all 0.3s ease;
     }
-    body.dark-mode #burger.open {
-        background: var(--ui-darkgrey)
-    }
     #burger, #burger::before, #burger::after {
         background: #000;
-    }
-    body.dark-mode #burger, 
-    body.dark-mode #burger::before, 
-    body.dark-mode #burger::after {
-        background: white;
     }
 	.nav-button {
 		font-size: 14px;

@@ -2,34 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	const navButtons = document.querySelector(".navbar")
 	const hamburger = document.querySelector(".hamburger-menu")
 	const burgerIcon = document.getElementById("burger")
-	const socials = document.querySelector(".socials") // FIXED: Defined this
+	const socials = document.querySelector(".socials")
 	const navLinks = document.querySelectorAll(".nav-button")
-	const themeButton = document.getElementById("theme-toggle")
-	const themeIcon = document.getElementById("theme-icon")
 	const OFFSET = 50
 
 	let lastScrollY = window.scrollY
 	let ticking = false
-
-	let darkMode = localStorage.getItem("darkMode") === "true"
-
-	function applyTheme() {
-		document.body.classList.toggle("dark-mode", darkMode)
-		localStorage.setItem("darkMode", darkMode)
-		if (themeIcon) {
-			themeIcon.src = darkMode
-				? "images/light-theme-icon.svg"
-				: "images/dark-theme-icon.svg"
-		}
-	}
-
-	if (themeButton) {
-		themeButton.addEventListener("click", () => {
-			darkMode = !darkMode
-			applyTheme()
-		})
-	}
-	applyTheme()
 
 	function toggleMenu() {
 		const isOpen = navButtons.classList.toggle("active")
