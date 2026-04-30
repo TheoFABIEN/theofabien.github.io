@@ -127,6 +127,11 @@ li::marker {
     content: "> ";
 }
 
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
 .main-container {
 	max-width: 850px;
 	margin: 0 auto;
@@ -482,6 +487,10 @@ li::marker {
 
     .lightbox-content {
         margin: 0px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block
     }
 }
 
